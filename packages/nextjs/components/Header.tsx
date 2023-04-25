@@ -45,10 +45,11 @@ export const Header = () => {
           Debug Contracts
         </NavLink>
       </li>
+
       <li>
-        <NavLink href="/example-ui">
+        <NavLink href="/dashboard">
           <SparklesIcon className="h-4 w-4" />
-          Example UI
+          Dashboard
         </NavLink>
       </li>
     </>

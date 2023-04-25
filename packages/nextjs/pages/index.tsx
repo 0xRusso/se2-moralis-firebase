@@ -18,6 +18,11 @@ const Home: NextPage = () => {
             <span className="block text-4xl font-bold">Scaffold-ETH 2</span>
           </h1>
           <p className="text-center text-lg">
+            <Link href="/login" passHref className="link">
+              Login
+            </Link>
+          </p>
+          <p className="text-center text-lg">
             Get started by editing{" "}
             <code className="italic bg-base-300 text-base font-bold">packages/nextjs/pages/index.tsx</code>
           </p>

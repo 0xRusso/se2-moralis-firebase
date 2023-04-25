@@ -6,7 +6,7 @@ import scaffoldConfig from "~~/scaffold.config";
 import { burnerWalletId, defaultBurnerChainId } from "~~/services/web3/wagmi-burner/BurnerConnector";
 import { getTargetNetwork } from "~~/utils/scaffold-eth";
 
-const walletIdStorageKey = "scaffoldEth2.wallet";
+const walletIdStorageKey = "fr3ela.wallet";
 
 /**
  * This function will get the initial wallet connector (if any), the app will connect to
@@ -35,7 +35,6 @@ const getInitialConnector = (
       if (previousWalletId === burnerWalletId && !allowBurner) {
         return;
       }
-
       const connector = connectors.find(f => f.id === previousWalletId);
       return { connector };
     }
@@ -65,7 +64,8 @@ export const useAutoConnect = (): void => {
 
   useEffectOnce(() => {
     const initialConnector = getInitialConnector(walletId, connectState.connectors);
-
+    console.log("initialConnector", initialConnector);
+    console.log("Caiu aqui no useEffectOnce");
     if (initialConnector?.connector) {
       connectState.connect({ connector: initialConnector.connector, chainId: initialConnector.chainId });
     }

@@ -20,7 +20,6 @@ export const RainbowKitCustomConnectButton = () => {
     <ConnectButton.Custom>
       {({ account, chain, openAccountModal, openConnectModal, mounted }) => {
         const connected = mounted && account && chain;
-
         return (
           <>
             {(() => {
